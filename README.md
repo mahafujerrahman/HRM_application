@@ -1,6 +1,13 @@
-# hrm_application
-
+# HRM_application
 A new Flutter project.
+[Uploading HRM_APP.webm…]()
+
+# HRM_application(LogIn Screen)
+![LogInSrceen_HRM](https://github.com/mahafujerrahman/HRM_application/assets/86947799/6c7059d0-4d78-432e-abbe-5775fca86208)
+
+# HRM_application(Home Screen)
+![HomeSrceen_HRM](https://github.com/mahafujerrahman/HRM_application/assets/86947799/00d27238-b20e-4e66-adb1-0789add4396c)
+
 
 ## Getting Started
 
