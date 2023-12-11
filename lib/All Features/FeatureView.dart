@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hrm_application/All%20Features/AttendanceCard.dart';
+import 'package:hrm_application/All%20Features/PaySlip.dart';
+import 'package:hrm_application/HomeScreen.dart';
+import 'package:hrm_application/Login_Screen.dart';
 
 class FeatureView extends StatelessWidget {
   final List<Map<String, dynamic>> features;
@@ -47,12 +50,12 @@ class FeatureView extends StatelessWidget {
                               ),
                               padding: EdgeInsets.only(left: 10, top: 5),
                               child: const Text(
-                                "See All",
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 16,
-                                  color: Colors.deepPurple,
-                                )),
+                                  "See All",
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16,
+                                    color: Colors.deepPurple,
+                                  )),
                             ),
                           ],
                         ),
@@ -68,32 +71,62 @@ class FeatureView extends StatelessWidget {
                   scrollDirection: Axis.horizontal,
                   itemCount: features.length,
                   itemBuilder: (BuildContext context, int index) {
-                    return Padding(
-                      padding: const EdgeInsets.all(5),
-                      child: Column(
-                        children: [
-                          Container(
-                            decoration: BoxDecoration(
-                              color: Colors.black12,
-                              borderRadius: BorderRadius.circular(15),
+                    return GestureDetector(
+                      onTap: () {
+                        // Navigate to different pages based on the feature name
+                        if (features[index]['name'] == 'Attendance') {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => LogInScreen(),),
+                          );
+                        } else if (features[index]['name'] == 'Contract') {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => PaySlip(),
                             ),
-                            padding: const EdgeInsets.all(10),
-                            height: 60,
-                            width: 60,
-                            child: Icon(features[index]['icon'],
-                                size: 30, color: Colors.deepPurple),
-                          ),
-                          SizedBox(height: 5),
-                          Text(
-                            features[index]['name'],
-                            style: const TextStyle(color: Colors.black),
-                          ),
-                        ],
+                          );
+                        }
+
+                        else if (features[index]['name'] == 'Pay Slip') {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => PaySlip(),
+                            ),
+                          );
+                        }
+
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(5),
+                        child: Column(
+                          children: [
+                            Container(
+                              decoration: BoxDecoration(
+                                color: Colors.black12,
+                                borderRadius: BorderRadius.circular(15),
+                              ),
+                              padding: const EdgeInsets.all(10),
+                              height: 60,
+                              width: 60,
+                              child: Icon(features[index]['icon'],
+                                  size: 30, color: Colors.deepPurple),
+                            ),
+                            SizedBox(height: 5),
+                            Text(
+                              features[index]['name'],
+                              style: const TextStyle(color: Colors.black),
+                            ),
+                          ],
+                        ),
                       ),
                     );
                   },
                 ),
               ),
+
               SizedBox(height: 30),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -256,3 +289,4 @@ class FeatureView extends StatelessWidget {
     );
   }
 }
+
