@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hrm_application/All%20Features/PaySlip/PaySlip_Month.dart';
 import 'package:hrm_application/HomeScreen.dart';
 
 class PaySlip extends StatelessWidget {
@@ -131,7 +132,13 @@ class PaySlip extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(30),
                               ),
                               child: TextButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) => PaySlipMonth()),
+                                  );
+                                },
                                 child: const Row(
                                   children: [
                                     Text(
@@ -219,7 +226,10 @@ class PaySlip extends StatelessWidget {
                               child: IconButton(
                                 icon: Icon(Icons.download,
                                     color: Colors.deepPurple,size: 25),
-                                onPressed: () {},
+                                onPressed: () {
+
+
+                                },
                               ),
                             ),
                             Container(height: 35,
