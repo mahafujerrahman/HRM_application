@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hrm_application/All%20Features/Attendance/Attendance.dart';
 import 'package:hrm_application/All%20Features/AttendanceCard.dart';
 import 'package:hrm_application/All%20Features/PaySlip/PaySlip.dart';
 import 'package:hrm_application/HomeScreen.dart';
@@ -78,7 +79,7 @@ class FeatureView extends StatelessWidget {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => LogInScreen(),),
+                              builder: (context) => Attendance(),),
                           );
                         } else if (features[index]['name'] == 'Contract') {
                           Navigator.push(

@@ -145,11 +145,6 @@ class PaySlipMonth extends StatelessWidget {
                           ),
                         ),
 
-
-
-
-
-
                       ],
                     ),
                   ),
@@ -296,12 +291,6 @@ class PaySlipMonth extends StatelessWidget {
                           ],
                         ),
                       ),
-
-
-
-
-
-
                     ],
                   ),
                 ),
